@@ -6,24 +6,39 @@ var LastNames = ['Blu', 'Verde', 'Rosso', 'Arancio', 'Nero', 'Bianchi'];
 
 var RandomList = [''];
 
-var NamesLe = (Names.length -1);
 
 // Ciclo For//
-for(var i = 0; i < 3; i++){
+// for(var i = 0; i < 3; i++){
+
+//     var RandomNames = Names[Math.floor(Math.random() * Names.length)];
+//     var RandLastNames = LastNames[Math.floor(Math.random() * LastNames.length)];
+
+//     var NewGuest = RandomNames + '  ' + RandLastNames;
+
+//     RandomList.includes(NewGuest);
+
+//     RandomList.push(NewGuest);
+
+//     document.getElementById('stampa').innerHTML += "<li>" + NewGuest + "</li>";
+// }
+
+// Ciclo While//
+
+while(RandomList.length <= 3){
 
     var RandomNames = Names[Math.floor(Math.random() * Names.length)];
     var RandLastNames = LastNames[Math.floor(Math.random() * LastNames.length)];
 
     var NewGuest = RandomNames + '  ' + RandLastNames;
 
-    RandomList.includes(NewGuest);
+    if(!RandomList.includes(NewGuest)){
 
-    RandomList.push(NewGuest);
+        RandomList.push(NewGuest);
 
-    document.getElementById('stampa').innerHTML += "<li>" + NewGuest + "</li>";
+        document.getElementById('stampa').innerHTML += "<li>" + NewGuest + "</li>";
+    }
 }
 
-// Ciclo While//
 
 
 
